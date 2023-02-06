@@ -1,0 +1,9 @@
+file_path='/input/file/path'
+file_type=$(file -b $file_path)
+byte=$(dd if=lol.lol bs=1 count=2 skip=42 2>/dev/null)
+if [ "$byte" == "42" ] && [ "$file_type" == "42 file" ]; then
+	echo "This file type is '42 file'. It contains string '42' at 42nd byte."
+else
+	echo "This file doesn't meet 42 requirement."
+fi
+
