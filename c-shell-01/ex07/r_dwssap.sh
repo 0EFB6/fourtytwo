@@ -1,0 +1,1 @@
+cat /etc/passwd | awk -F: '{if ($1 !~ /^#/ && NR >= 7 && NR <= 15) print $1}' | awk 'NR' | awk '{split($0,a,""); for (i=length(a); i; i--) printf a[i]; printf "\n"}' | sort -r | tr '\n' ',' | sed 's/.$/./' | cat -e

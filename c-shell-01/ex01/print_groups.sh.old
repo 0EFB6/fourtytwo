@@ -1,0 +1,1 @@
+groups linux | sed 's/ /,/g' | tr -d '\n'
