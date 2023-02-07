@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/07 22:19:20 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/07 22:32:55 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/07 22:45:02 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/07 22:46:41 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_print_numbers(void)
 {
-	write(1, &c,1);
+	char	c = '0';
+
+	while (c <= '9')
+	{
+		write(1, &c, 1);
+		c++;
+	}
 }
 
-int	main()
+int		main()
 {
-	ft_putchar('g');
-	return(0);
+	ft_print_numbers();
 }

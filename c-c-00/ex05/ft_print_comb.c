@@ -1,24 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/07 22:19:20 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/07 22:32:55 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/07 22:54:13 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/07 22:57:54 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void ft_print_comb(void)
 {
-	write(1, &c,1);
+	int i;
+	int j;
+	int k;
+    char c[4];
+
+    for (i = 0; i < 10; i++)
+    {
+        for (j = i + 1; j < 10; j++)
+        {
+            for (k = j + 1; k < 10; k++)
+            {
+                c[0] = i + '0';
+                c[1] = j + '0';
+                c[2] = k + '0';
+                c[3] = ',';
+                write(1, &c, 4);
+            }
+        }
+    }
 }
 
-int	main()
+int main()
 {
-	ft_putchar('g');
-	return(0);
+	ft_print_comb();
 }

@@ -1,24 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/07 22:19:20 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/07 22:32:55 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/07 23:21:35 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/07 23:32:19 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void ft_putnbr(int nb)
 {
-	write(1, &c,1);
+	char c[11];
+    int i = 0;
+
+    if (nb == 0)
+    {
+        write(1, "0", 1);
+        return;
+    }
+    if (nb < 0)
+    {
+        write(1, "-", 1);
+        nb = -nb;
+    }
+    while (nb > 0)
+    {
+        c[i++] = nb % 10 + '0';
+        nb /= 10;
+    }
+    while (i > 0)
+    {
+        write(1, &c[--1], 1);
+    }
 }
 
-int	main()
-{
-	ft_putchar('g');
-	return(0);
+int main(){
+	ft_putnbr(1234);
 }
