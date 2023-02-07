@@ -1,1 +1,1 @@
-cat /etc/passwd | awk -F: '{if ($1 !~ /^#/ && NR >= 7 && NR <= 15) print $1}' | awk 'NR' | awk '{split($0,a,""); for (i=length(a); i; i--) printf a[i]; printf "\n"}' | sort -r | tr '\n' ',' | sed 's/.$/./' | cat -e
+cat /etc/passwd | grep -v '#' | cut -d ':' -f1 | awk "NR%2==0" | rev | sort -r | sed -n "$FT_LINE1,$FT_LINE2p" | tr "\n" "," | sed 's/,/, /g' | sed 's/$/,/' | sed 's/, ,/./g' | tr -d '\n'
