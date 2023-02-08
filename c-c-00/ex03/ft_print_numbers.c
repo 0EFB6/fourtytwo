@@ -6,7 +6,7 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 22:45:02 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/07 22:46:41 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:16:16 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	ft_print_numbers(void)
 {
-	char	c = '0';
+	char	c;
 
+	c = '0';
 	while (c <= '9')
 	{
 		write(1, &c, 1);
@@ -23,7 +24,7 @@ void	ft_print_numbers(void)
 	}
 }
 
-int		main()
+int	main(void)
 {
 	ft_print_numbers();
 }

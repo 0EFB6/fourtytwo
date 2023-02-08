@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: cwei-she <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/07 22:32:08 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/07 22:38:21 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/08 16:06:24 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/08 16:06:51 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	ft_print_alphabet(void)
 {
-	char	c = 'a';
+	char	c;
 
+	c = 'c';
 	while (c <= 'z')
 	{
 		write(1, &c, 1);
@@ -23,7 +24,7 @@ void	ft_print_alphabet(void)
 	}
 }
 
-int	main()
+int	main(void)
 {
 	ft_print_alphabet();
 }
