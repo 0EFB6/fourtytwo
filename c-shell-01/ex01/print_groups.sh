@@ -1,1 +1,1 @@
-id -nG FT_USER | sed 's/ /\,/g'
+id -G -n $FT_USER | tr ' ' ',' | tr -d '\n'
