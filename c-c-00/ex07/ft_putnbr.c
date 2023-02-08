@@ -6,38 +6,42 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 23:21:35 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/07 23:32:19 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/08 21:40:23 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 void ft_putnbr(int nb)
 {
-	char c[11];
-    int i = 0;
-
-    if (nb == 0)
-    {
-        write(1, "0", 1);
-        return;
-    }
-    if (nb < 0)
-    {
-        write(1, "-", 1);
-        nb = -nb;
-    }
-    while (nb > 0)
-    {
-        c[i++] = nb % 10 + '0';
-        nb /= 10;
-    }
-    while (i > 0)
-    {
-        write(1, &c[--1], 1);
-    }
+    if (nb == -2147483648)
+	{
+		ft_putchar('-');
+		ft_putchar('2');
+		ft_putnbr(147483648);
+	}
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+		ft_putnbr(nb);
+	}
+	else if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+	{
+		ft_putchar(48 + nb);
+	}
 }
 
 int main(){
-	ft_putnbr(1234);
+	ft_putnbr(42);
 }
