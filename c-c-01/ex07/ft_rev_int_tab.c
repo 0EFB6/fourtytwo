@@ -6,22 +6,22 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 22:51:16 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/08 22:54:45 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:21:42 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
 }
 
-void ft_rev_int_tab(int *tab, int size)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int z;
+	int	z;
 
 	z = 0;
 	while(z < size / 2)

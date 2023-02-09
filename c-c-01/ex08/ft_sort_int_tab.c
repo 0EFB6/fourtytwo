@@ -6,23 +6,23 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 22:55:02 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/08 23:01:38 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:22:12 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
 }
 
-void ft_sort_int_tab(int *tab, int size)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	int a;
-	int b;
+	int	a;
+	int	b;
 
 	a = size - 1;
 	while (a > 0)

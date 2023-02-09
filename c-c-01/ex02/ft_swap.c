@@ -6,13 +6,13 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 22:29:21 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/08 22:30:29 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:19:27 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-	int i;
+	int	i;
 
 	i = *a;
 	*a = *b;

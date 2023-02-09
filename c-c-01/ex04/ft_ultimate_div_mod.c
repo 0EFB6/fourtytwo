@@ -6,14 +6,14 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 22:32:47 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/08 22:35:11 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:19:11 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_ultimate_div_mod(int *a, int *b)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int div;
-	int mod;
+	int	div;
+	int	mod;
 
 	div = *a / *b;
 	mod = *a % *b;
