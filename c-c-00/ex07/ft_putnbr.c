@@ -6,20 +6,20 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 23:21:35 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/08 21:40:23 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/09 13:30:07 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void ft_putnbr(int nb)
+void	ft_putnbr(int nb)
 {
-    if (nb == -2147483648)
+	if (nb == -2147483648)
 	{
 		ft_putchar('-');
 		ft_putchar('2');
@@ -40,8 +40,4 @@ void ft_putnbr(int nb)
 	{
 		ft_putchar(48 + nb);
 	}
-}
-
-int main(){
-	ft_putnbr(42);
 }

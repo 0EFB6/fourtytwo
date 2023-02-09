@@ -6,7 +6,7 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 22:47:51 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/08 19:55:13 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/09 13:22:31 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,4 @@ void	ft_is_negative(int n)
 	{
 		write(1, &"P", 1);
 	}
-}
-
-int	main(void)
-{
-	ft_is_negative(123);
 }
