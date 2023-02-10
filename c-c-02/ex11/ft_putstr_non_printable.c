@@ -6,7 +6,7 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 21:08:40 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/09 21:28:03 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/10 22:42:08 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_putstr_non_printable(char *str)
 		if (*str >= 32 && *str <= 126)
 			write(1, str, 1);
 		else
-			print_hex(*str);
+			ft_puthex(*str);
 		str++;
 	}
 }

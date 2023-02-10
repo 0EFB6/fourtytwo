@@ -6,11 +6,11 @@
 /*   By: cwei-she <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 17:18:18 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/09 17:40:40 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/10 22:39:04 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_uppercase(char *str)
+char	*ft_strupcase(char *str)
 {
 	int	i;
 
