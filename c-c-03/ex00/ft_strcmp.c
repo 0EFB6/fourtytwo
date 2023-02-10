@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: cwei-she <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/08 22:51:16 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/10 10:17:42 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/10 11:00:11 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/10 11:18:24 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int	tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
-
-void	ft_rev_int_tab(int *tab, int size)
-{
-	int	z;
-
-	z = 0;
-	while (z < size / 2)
+	while (*s1 == *s2)
 	{
-		ft_swap(tab + z, tab + size - z - 1);
-		z++;
+		if (*s1 == '0')
+		{
+			return (0);
+		}
+		s1++;
+		s2++;
 	}
+	if (*(unsigned char *)s1 < *(unsigned char *)s2)
+	{
+		return (-1);
+	}
+	return (1);
 }

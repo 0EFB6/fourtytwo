@@ -6,7 +6,7 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 22:51:16 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/09 14:25:25 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/10 10:17:50 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_rev_int_tab(int *tab, int size)
 	z = 0;
 	while(z < size / 2)
 	{
-		ft_swap(tab + 1, tab + size - z - 1);
+		ft_swap(tab + z, tab + size - z - 1);
 		z++;
 	}
 }
