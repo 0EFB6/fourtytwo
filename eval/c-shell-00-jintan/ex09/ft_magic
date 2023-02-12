@@ -1,0 +1,3 @@
+42 string
+# 42 is the offset and string is the type of data which is string
+# Compile it with file -C -m nameoffile

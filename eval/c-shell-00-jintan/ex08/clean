@@ -1,0 +1,4 @@
+# Using the find command to search through the directories and sub-directories
+# Name ending by ~ and NAme start and end by #
+# https://www.oracle.com/technical-resources/articles/calish-find.html
+find . -name "#*#" -print -delete or -name "*~" -print -delete
