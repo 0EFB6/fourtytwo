@@ -6,7 +6,7 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 20:58:43 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/09 21:06:43 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/12 17:37:47 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -31,7 +31,7 @@ unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 int main(void)
 {
 	char str[] = "hello world ! ";
-	char dest[] = "lol ";
+	char dest[] = "lololo";
 	unsigned int size = 3;
 	printf("%d", ft_strlcpy(dest, str, size));
 }

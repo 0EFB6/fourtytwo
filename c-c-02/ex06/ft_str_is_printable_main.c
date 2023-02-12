@@ -6,7 +6,7 @@
 /*   By: cwei-she <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:30:17 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/09 17:17:46 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/12 17:34:52 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -28,5 +28,5 @@ int ft_str_is_printable(char *str)
 
 int	main(void)
 {
-	printf("%d", ft_str_is_printable("7"));
+	printf("%d", ft_str_is_printable("7\n\t"));
 }

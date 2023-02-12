@@ -6,7 +6,7 @@
 /*   By: cwei-she <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:30:17 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/09 17:13:04 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/12 17:33:38 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -28,5 +28,5 @@ int ft_str_is_lowercase(char *str)
 
 int	main(void)
 {
-	printf("%d", ft_str_is_lowercase("abGh"));
+	printf("%d", ft_str_is_lowercase("abgh"));
 }

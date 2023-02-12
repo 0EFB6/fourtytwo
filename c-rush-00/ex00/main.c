@@ -6,7 +6,7 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 20:10:52 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/12 15:44:39 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/12 16:40:19 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@ void	rush(int x, int y);
 
 int	main(void)
 {
-	rush(5, 5);
+	rush(1, 5);
 	return (0);
 }
