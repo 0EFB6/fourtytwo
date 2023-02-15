@@ -6,7 +6,7 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 23:22:43 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/14 23:41:59 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/15 13:16:50 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	int	mod;
 	int	len;
 
-	if(!ft_valid_base(base))
+	if (!ft_valid_base(base))
 		return ;
 	len = ft_strlen(base);
 	div = nbr / len;

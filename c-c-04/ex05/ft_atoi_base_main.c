@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*   ft_atoi_base_main.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 23:47:18 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/15 00:04:16 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/15 13:31:42 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdbool.h>
 #include <stdio.h>
-int ft_strlen(char *str)
+
+int	ft_strlen(char *str)
 {
 	int i;
 
@@ -27,7 +28,7 @@ int ft_strlen(char *str)
 
 int ft_valid_base(char* base)
 {
-	char *ptr;
+	char	*ptr;
 
 	if (ft_strlen(base) < 2)
 		return (0);
@@ -47,9 +48,9 @@ int ft_valid_base(char* base)
 	return (1);
 }
 
-int ft_get_position(char *base, char c)
+int	ft_get_position(char *base, char c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (*base)
@@ -72,9 +73,7 @@ int ft_atoi_base(char *str, char* base)
 	if (!ft_valid_base(base))
 		return (0);
 	while (!(*str >= '0' && *str <= '9') && *str != '-' && *str != '+')
-	{
 		str++;
-	}
 	while (*str == '-' || *str == '+')
 	{
 		if (*str == '-')

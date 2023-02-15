@@ -6,7 +6,7 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 23:47:18 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/15 00:07:07 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/15 13:31:29 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	ft_valid_base(char* base)
+int	ft_valid_base(char *base)
 {
 	char	*ptr;
 
@@ -62,19 +62,17 @@ int	ft_get_position(char *base, char c)
 	return (-1);
 }
 
-int	ft_atoi_base(char *str, char* base)
+int	ft_atoi_base(char *str, char *base)
 {
 	bool	is_negative;
-	int	num;
+	int		num;
 
 	is_negative = 0;
 	num = 0;
 	if (!ft_valid_base(base))
 		return (0);
 	while (!(*str >= '0' && *str <= '9') && *str != '-' && *str != '+')
-	{
 		str++;
-	}
 	while (*str == '-' || *str == '+')
 	{
 		if (*str == '-')

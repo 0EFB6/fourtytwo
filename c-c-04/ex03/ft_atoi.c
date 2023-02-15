@@ -6,7 +6,7 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 22:50:34 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/14 23:21:31 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/15 13:16:28 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(char *str)
 {
 	bool	is_negative;
-	int	num;
+	int		num;
 
 	is_negative = 0;
 	num = 0;
