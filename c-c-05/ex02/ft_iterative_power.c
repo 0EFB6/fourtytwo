@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cwei-she <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 15:05:29 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/15 15:55:33 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/16 12:55:13 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/16 12:55:23 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,4 @@ int	ft_iterative_power(int nb, int power)
 		power--;
 	}
 	return (result);
-}
-
-int	main(void)
-{
-	printf("%d", ft_iterative_power(0, 0));
 }
