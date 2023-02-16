@@ -1,25 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cwei-she <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/16 10:43:25 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/16 10:45:53 by cwei-she         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putstr(char *str)
 {
-    write(1, &c, 1);
-}
-
-void	ft_print_program_name(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (*str != '\0')
 	{
-		ft_putchar(str[i]);
-		i++;
+		write(1, str, 1);
+		str++;
 	}
+	write(1, "\n", 1);
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char *argv[])
 {
-	(void)argc;
-	ft_print_program_name(argv[0]);
-	ft_putchar('\n');
+	if (argc < 0)
+		return (-1);
+	ft_putstr(argv[0]);
+	return (0);
 }

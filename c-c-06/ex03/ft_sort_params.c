@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cwei-she <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/16 10:56:35 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/16 10:56:36 by cwei-she         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char *str)
@@ -9,7 +21,7 @@ void	ft_putchar(char *str)
 	}
 }
 
-int ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
 	while (*s1 == *s2 && (*s1 != '\0' || *s2 != '\0'))
 	{
@@ -30,8 +42,8 @@ void	ft_swap(char *a, char *b)
 
 void	ft_sort_string(char *str[], int size)
 {
-	int		a;
-	int		b;
+	int	a;
+	int	b;
 
 	a = 0;
 	while (a < size - 1)
@@ -49,9 +61,9 @@ void	ft_sort_string(char *str[], int size)
 	}
 }
 
-int		main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-	int i;
+	int	i;
 
 	ft_sort_string(argv + 1, argc - 1);
 	i = argc - 1;
