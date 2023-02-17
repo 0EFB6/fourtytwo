@@ -10,12 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdbool.h>
-
 int	ft_atoi(char *str)
 {
-	bool	is_negative;
-	int		num;
+	int	is_negative;
+	int	num;
 
 	is_negative = 0;
 	num = 0;
@@ -23,7 +21,7 @@ int	ft_atoi(char *str)
 	{
 		str++;
 	}
-	while (*str == '-' || *str == '+')
+	while (*str && (*str == '-' || *str == '+'))
 	{
 		if (*str == '-')
 			is_negative = !is_negative;
