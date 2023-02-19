@@ -6,7 +6,7 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 15:42:55 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/19 15:42:56 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/19 16:26:12 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int	ft_check_arg(char *str, int size)
 	int	number;
 
 	n = 0;
-	number = 0;
 	count = 0;
+	number = 0;
 	if (ft_is_num(str[n]))
 	{
 		while (str[n])

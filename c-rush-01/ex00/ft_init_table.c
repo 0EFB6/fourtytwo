@@ -15,25 +15,25 @@
 
 int	ft_init_line(int **tab, int size, char *argv)
 {
-	int	a;
-	int	b;
+	int	y;
+	int	x;
 	int	n;
 
-	a = 0;
-	b = 1;
+	y = 0;
+	x = 1;
 	n = 1;
-	while (b <= size)
+	while (x <= size)
 	{
-		tab[a][b] = ft_get_arg(argv, n);
-		b++;
+		tab[y][x] = ft_get_arg(argv, n);
+		x++;
 		n++;
 	}
-	b = 1;
-	a = 5;
-	while (b <= size)
+	x = 1;
+	y = 5;
+	while (x <= size)
 	{
-		tab[a][b] = ft_get_arg(argv, n);
-		b++;
+		tab[y][x] = ft_get_arg(argv, n);
+		x++;
 		n++;
 	}
 	return (1);
@@ -41,25 +41,25 @@ int	ft_init_line(int **tab, int size, char *argv)
 
 int	ft_init_column(int **tab, int size, char *argv)
 {
-	int	a;
-	int	b;
+	int	y;
+	int	x;
 	int	n;
 
-	a = 1;
-	b = 0;
+	y = 1;
+	x = 0;
 	n = size * 2 + 1;
-	while (a <= size)
+	while (y <= size)
 	{
-		tab[a][b] = ft_get_arg(argv, n);
-		a++;
+		tab[y][x] = ft_get_arg(argv, n);
+		y++;
 		n++;
 	}
-	a = 1;
-	b = 5;
-	while (a <= size)
+	y = 1;
+	x = 5;
+	while (y <= size)
 	{
-		tab[a][b] = ft_get_arg(argv, n);
-		a++;
+		tab[y][x] = ft_get_arg(argv, n);
+		y++;
 		n++;
 	}
 	return (1);
@@ -67,19 +67,19 @@ int	ft_init_column(int **tab, int size, char *argv)
 
 int	ft_init_fill(int **tab, int size)
 {
-	int	a;
-	int	b;
+	int	y;
+	int	x;
 
-	a = 1;
-	while (a <= size)
+	y = 1;
+	while (y <= size)
 	{
-		b = 1;
-		while (b <= size)
+		x = 1;
+		while (x <= size)
 		{
-			tab[a][b] = 0;
-			b++;
+			tab[y][x] = 0;
+			x++;
 		}
-		a++;
+		y++;
 	}
 	return (1);
 }
