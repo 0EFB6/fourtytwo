@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_destroy_table.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 16:24:55 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/19 16:01:59 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/19 13:08:03 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/19 13:08:04 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-void	ft_putchar(char c)
+void	ft_destroy_table(int **tab, int size)
 {
-	write(1, &c, 1);
+	while (size)
+	{
+		free(tab[size]);
+		size--;
+	}
+	free(tab);
 }

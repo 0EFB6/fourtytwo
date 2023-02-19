@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 16:24:55 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/19 16:01:59 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/18 16:25:35 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/18 16:28:44 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "rush.h"
 
-void	ft_putchar(char c)
+void	ft_putstr(char *str)
 {
-	write(1, &c, 1);
+	while (*str)
+	{
+		ft_putchar(*str);
+		str++;
+	}
 }

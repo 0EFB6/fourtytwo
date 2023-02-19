@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_table.c                                   :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/19 15:44:20 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/19 15:44:20 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/19 13:08:09 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/19 13:08:10 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush.h"
+#include <stdlib.h>
 
-void	ft_print_table(int **tab, int size)
+int	main(int argc, char **argv)
 {
-	int	a;
-	int	b;
-
-	a = 1;
-	b = 1;
-	while (a < size + 1)
+	int	**tab;
+	int	size;
+	
+	tab = NULL;
+	size = 4;
+	if (argc != 2)
+		return (error_1());
+	if (!ft_check_arg(argv[1], size))
+		return (error_2());
+	tab = ft_init_table(argv[1], size);
+	if (tab != NULL)
 	{
-		while (b < size + 1)
-		{
-			ft_putnbr(tab[a][b]);
-			b++;
-			if (b < size + 1)
-				ft_putchar(' ');
-		}
-		ft_putchar('\n');
-		b = 1;
-		a++;
+		ft_solve(tab, 1, 1, size);
+		if (tab[size][size] != 0)
+			ft_print_table(tab, size);
+		else
+			return (error_3());
+		ft_destroy_table(tab, size);
+		return (0);
 	}
-	return ;
+	return (error());
 }

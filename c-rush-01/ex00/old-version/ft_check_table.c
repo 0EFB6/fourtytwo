@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/19 15:43:02 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/19 16:04:30 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/19 13:03:40 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/19 13:03:41 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 int	ft_check_line(int **tab, int size, int x, int y)
 {
 	int	tmp;
-	int	i;
+	int	count;
 
 	tmp = tab[y][x];
-	i = 0;
+    count = 0;
 	x = 1;
 	while (x <= size)
 	{
 		if (tmp == tab[y][x])
-			i++;
+			count++;
 		x++;
 	}
-	if (i <= 1)
+	if (count <= 1)
 		return (1);
 	return (0);
 }
@@ -34,18 +34,19 @@ int	ft_check_line(int **tab, int size, int x, int y)
 int	ft_check_column(int **tab, int size, int x, int y)
 {
 	int	tmp;
-	int	i;
+	int	count;
 
+	
 	tmp = tab[y][x];
-	i = 0;
+	count = 0;
 	y = 1;
 	while (y <= size)
 	{
 		if (tmp == tab[y][x])
-			i++;
+			count++;
 		y++;
 	}
-	if (i <= 1)
+	if (count <= 1)
 		return (1);
 	return (0);
 }

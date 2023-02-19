@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_table.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 16:24:55 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/19 16:01:59 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/19 13:03:10 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/19 13:03:11 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "rush.h"
 
-void	ft_putchar(char c)
+void	ft_print_table(int **tab, int size)
 {
-	write(1, &c, 1);
+	int	y;
+	int	x;
+
+	y = 1;
+	x = 1;
+	while (y < size + 1)
+	{
+		while (x < size + 1)
+		{
+			ft_putnbr(tab[y][x]);
+			x++;
+			if (x < size + 1)
+				ft_putchar(' ');
+		}
+		ft_putchar('\n');
+		x = 1;
+		y++;
+	}
 }
