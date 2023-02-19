@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 16:25:35 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/18 16:28:44 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/18 23:42:29 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/18 23:43:22 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush.h"
 
-void ft_putstr(char *str)
+void	ft_putnbr(int nb)
 {
-	while (*str)
+	if (nb == -2147483648)
 	{
-		ft_putchar(*str);
-		str++;
+		ft_putchar('-');
+		ft_putchar('2');
+		ft_putnbr(147483648);
+	}
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+		ft_putnbr(nb);
+	}
+	else if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+	{
+		ft_putchar(48 + nb);
 	}
 }

@@ -1,47 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_size.c                                      :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 16:47:38 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/18 17:55:57 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/18 23:40:02 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/18 23:41:00 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_is_valid(char *str, int size)
+int ft_strlen(char *str)
 {
 	int i;
-	int nb;
 
 	i = 0;
-	nb = size / 4;
-	while (i < size)
-	{
-		if (str[i] < '1' || str[i] > nb + '0')
-			return (0);
-		str += 2;
+	while(str[i] != '\0')
 		i++;
-	}
-	return (nb);
+	return (i);
 }
-
-int ft_get_size(char *str)
-{
-	int i;
-	int size;
-
-	i = 0;
-	size = 0;
-	while(str[i])
-	{
-		if (str[i] >= '1' && str[i] <= '9')
-			size++;
-		else
-			return (0);
-		i++;
-		if (str[i] == ' ' && !str[i])
-			return (0);
-	}
-	if (

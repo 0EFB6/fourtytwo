@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_table.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 16:25:35 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/18 16:28:44 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/18 16:30:46 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/18 16:34:49 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush.h"
 
-void ft_putstr(char *str)
+void ft_print_table(char **table, int size)
 {
-	while (*str)
+	int x;
+	int y;
+
+	y = 0; /* Row number */
+	while (y < size)
 	{
-		ft_putchar(*str);
-		str++;
+		x = 0; /* Column number */
+		while (x < size)
+		{
+			ft_putchar(tab[y][x] + '0');
+			if (x < size - 1)
+			{
+				ft_putchar(' ');
+				x++;
+			}
+		}
+		ft_putchar('\n');
+		y++;
 	}
 }
+
