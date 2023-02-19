@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_check_arg.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/19 13:03:51 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/19 13:03:52 by cwei-she         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rush.h"
 
 int	ft_check_count(int count, int size, int number)
@@ -7,15 +19,15 @@ int	ft_check_count(int count, int size, int number)
 	return (0);
 }
 
-int	ft_checkarg(char *str, int size)
+int	ft_check_arg(char *str, int size)
 {
 	int	n;
 	int	count;
 	int	number;
 
 	n = 0;
-	number = 0;
 	count = 0;
+	number = 0;
 	if (ft_is_num(str[n]))
 	{
 		while (str[n])

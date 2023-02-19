@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_table.c                                   :+:      :+:    :+:   */
+/*   ft_get_arg.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/19 13:03:10 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/19 13:03:11 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/19 13:03:28 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/19 13:03:29 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush.h"
 
-void	ft_print_table(int **tab, int size)
+int	ft_get_arg(char *str, int nb)
 {
-	int	a;
-	int	b;
+	int	i;
+	int	count;
+	int	result;
 
-	a = 1;
-	b = 1;
-	while (a < size + 1)
+	i = 0;
+	count = 0;
+	result = 0;
+	while (str[i])
 	{
-		while (b < size + 1)
+		while (!ft_is_num(str[i]))
+			i++;
+		while (ft_is_num(str[i]))
 		{
-			ft_putnbr(tab[a][b]);
-			b++;
-			if (b < size + 1)
-				ft_putchar(' ');
+			result = str[i] - 48;
+			i++;
+			if (!ft_is_num(str[i]))
+				count++;
+			if (count == nb)
+				return (result);
 		}
-		ft_putchar('\n');
-		b = 1;
-		a++;
+		result = 0;
+		i++;
 	}
+	return (-1);
 }

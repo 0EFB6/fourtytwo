@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_check_table.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/19 13:03:40 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/19 13:03:41 by cwei-she         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rush.h"
 
 int	ft_check_line(int **tab, int size, int x, int y)
@@ -39,7 +51,7 @@ int	ft_check_column(int **tab, int size, int x, int y)
 	return (0);
 }
 
-int	ft_check(int **tab, int size, int x, int y)
+int	ft_check_table(int **tab, int size, int x, int y)
 {
 	if (ft_check_line(tab, size, x, y) && ft_check_column(tab, size, x, y))
 		return (1);

@@ -12,7 +12,6 @@
 
 #include "rush.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 int	ft_init_line(int **tab, int size, char *argv)
 {
@@ -25,7 +24,7 @@ int	ft_init_line(int **tab, int size, char *argv)
 	n = 1;
 	while (b <= size)
 	{
-		tab[a][b] = ft_getarg(argv, n);
+		tab[a][b] = ft_get_arg(argv, n);
 		b++;
 		n++;
 	}
@@ -33,7 +32,7 @@ int	ft_init_line(int **tab, int size, char *argv)
 	a = 5;
 	while (b <= size)
 	{
-		tab[a][b] = ft_getarg(argv, n);
+		tab[a][b] = ft_get_arg(argv, n);
 		b++;
 		n++;
 	}
@@ -51,7 +50,7 @@ int	ft_init_column(int **tab, int size, char *argv)
 	n = size * 2 + 1;
 	while (a <= size)
 	{
-		tab[a][b] = ft_getarg(argv, n);
+		tab[a][b] = ft_get_arg(argv, n);
 		a++;
 		n++;
 	}
@@ -59,7 +58,7 @@ int	ft_init_column(int **tab, int size, char *argv)
 	b = 5;
 	while (a <= size)
 	{
-		tab[a][b] = ft_getarg(argv, n);
+		tab[a][b] = ft_get_arg(argv, n);
 		a++;
 		n++;
 	}
@@ -85,7 +84,7 @@ int	ft_init_fill(int **tab, int size)
 	return (1);
 }
 
-int	**ft_init(char *argv, int size)
+int	**ft_init_table(char *argv, int size)
 {
 	int	a;
 	int	**tab;

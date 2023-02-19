@@ -13,25 +13,43 @@
 #ifndef RUSH_H
 #define RUSH_H
 
-int	ft_strlen(char *str);
-int	ft_is_num(char c);
-int	ft_getarg(char *str, int nb);
-int	**ft_init(int size, char *argv);
-int	ft_init_fill(int **tab, int size);
-int	ft_solve(int **tab, int x, int y, int size);
-int	ft_init_line(int **tab, int size, char *argv);
-int	ft_init_column(int **tab, int size, char *argv);
-int	ft_check_total(int **tab, int x, int y, int size);
-int	ft_check_line(int **tab, int size, int x, int y);
-int	ft_check_column(int **tab, int size, int x, int y);
-int	ft_check_count(int count, int size, int number);
-int	ft_checkarg(char *str, int size);
-int	ft_check(int **tab, int size, int x, int y);
-int	ft_check_view_colum_total(int	**tab, int	x, int	y, int size);
-int	ft_check_view_line_total(int	**tab, int	x, int	y, int size);
-void	ft_putstr(char *str);
+/* ft_check_arg.c */
+int ft_check_count(int count, int size, int number);
+int ft_check_arg(char *str, int size);
+
+/* ft_check_table.c */
+int ft_check_line(int **tab, int size, int x, int y);
+int ft_check_column(int **tab, int size, int x, int y);
+int ft_check_table(int **tab, int size, int x, int y);
+
+/* ft_get_arg.c */
+int ft_get_arg(char *str, int nb);
+
+/* ft_init_table.c */
+int ft_init_line(int **tab, int size, char *argv);
+int ft_init_column(int **tab, int size, char *argv);
+int ft_init_fill(int **tab, int size);
+int **ft_init_table(char *argv, int size);
+
+/* ft_is_num.c */
+int ft_is_num(char c);
+
+/* ft_print_table.c */
+void	ft_print_table(int **tab, int size);
+
+/* ft_putchar.c */
 void	ft_putchar(char c);
+
+/* ft_putnbr.c */
 void	ft_putnbr(int nb);
-void	ft_show(int **tab, int size);
+
+/* ft_putstr.c */
+void	ft_putstr(char *str);
+
+/* ft_solve.c */
+int ft_solve(int **tab, int x, int y, int size);
+
+/* ft_strlen.c */
+int ft_strlen(char *str);
 
 #endif

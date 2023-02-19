@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_solve.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/19 13:02:56 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/19 13:02:57 by cwei-she         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rush.h"
 
-int	ft_check_view_colum_total(int	**tab, int	x, int	y, int size)
+int	ft_check_view_colum_total(int **tab, int	x, int	y, int size)
 {
 	int	view;
 	int	tmp;
@@ -24,7 +36,7 @@ int	ft_check_view_colum_total(int	**tab, int	x, int	y, int size)
 	return (0);
 }
 
-int	ft_check_view_line_total(int	**tab, int	x, int	y, int size)
+int	ft_check_view_line_total(int **tab, int	x, int	y, int size)
 {
 	int	view;
 	int	tmp;
@@ -37,11 +49,12 @@ int	ft_check_view_line_total(int	**tab, int	x, int	y, int size)
 		return (1);
 	while (n <= size)
 	{
-		if (tmp < tab[y][n++])
+		if (tmp < tab[y][n])
 		{
 			tmp = tab[y][n - 1];
 			view++;
 		}
+		n++;
 	}
 	if (view == tab[y][0])
 		return (1);
@@ -52,7 +65,7 @@ int	ft_check_total(int **tab, int x, int y, int size)
 {
 	if (ft_check_view_line_total(tab, x, y, size)
 		&& ft_check_view_colum_total(tab, x, y, size)
-		&& ft_check(tab, size, x, y))
+		&& ft_check_table(tab, size, x, y))
 		return (1);
 	return (0);
 }
@@ -61,8 +74,8 @@ int	ft_solve(int **tab, int x, int y, int size)
 {
 	int	n;
 
-	n = 0;
-	while (++n <= size)
+	n = 1;
+	while (n <= size)
 	{
 		tab[y][x] = n;
 		if (ft_check_total(tab, x, y, size))
@@ -81,6 +94,7 @@ int	ft_solve(int **tab, int x, int y, int size)
 			}
 			tab[y][x] = 0;
 		}
+		n++;
 	}
 	tab[y][x] = 0;
 	return (0);
