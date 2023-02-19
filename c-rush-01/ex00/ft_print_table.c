@@ -14,22 +14,22 @@
 
 void	ft_print_table(int **tab, int size)
 {
-	int	a;
-	int	b;
+	int	y;
+	int	x;
 
-	a = 1;
-	b = 1;
-	while (a < size + 1)
+	y = 1;
+	x = 1;
+	while (y < size + 1)
 	{
-		while (b < size + 1)
+		while (x < size + 1)
 		{
-			ft_putnbr(tab[a][b]);
-			b++;
-			if (b < size + 1)
+			ft_putnbr(tab[y][x]);
+			x++;
+			if (x < size + 1)
 				ft_putchar(' ');
 		}
 		ft_putchar('\n');
-		b = 1;
-		a++;
+		x = 1;
+		y++;
 	}
 }

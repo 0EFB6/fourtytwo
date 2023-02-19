@@ -14,21 +14,23 @@
 #define RUSH_H
 
 /* ft_check_arg.c */
-int ft_check_count(int count, int size, int number);
 int ft_check_arg(char *str, int size);
 
 /* ft_check_table.c */
-int ft_check_line(int **tab, int size, int x, int y);
-int ft_check_column(int **tab, int size, int x, int y);
 int ft_check_table(int **tab, int size, int x, int y);
 
+/* ft_destroy_table.c */
+void    ft_destroy_table(int **tab, int size);
+
+/* ft_error.c */
+int error_1(void);
+int error_2(void);
+int error_3(void);
+int error(void);
 /* ft_get_arg.c */
 int ft_get_arg(char *str, int nb);
 
 /* ft_init_table.c */
-int ft_init_line(int **tab, int size, char *argv);
-int ft_init_column(int **tab, int size, char *argv);
-int ft_init_fill(int **tab, int size);
 int **ft_init_table(char *argv, int size);
 
 /* ft_is_num.c */

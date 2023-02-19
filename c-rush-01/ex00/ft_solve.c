@@ -1,18 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_solve.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/19 13:02:56 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/19 13:02:57 by cwei-she         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "rush.h"
+#include <stdio.h>
 
-int	ft_check_view_colum_total(int **tab, int	x, int	y, int size)
+int	ft_check_view_colum_total(int	**tab, int	x, int	y, int size)
 {
 	int	view;
 	int	tmp;
@@ -36,7 +25,7 @@ int	ft_check_view_colum_total(int **tab, int	x, int	y, int size)
 	return (0);
 }
 
-int	ft_check_view_line_total(int **tab, int	x, int	y, int size)
+int	ft_check_view_line_total(int	**tab, int	x, int	y, int size)
 {
 	int	view;
 	int	tmp;

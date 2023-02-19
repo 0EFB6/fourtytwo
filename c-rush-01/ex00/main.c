@@ -1,39 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/19 13:08:09 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/19 13:08:10 by cwei-she         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rush.h"
 #include <stdlib.h>
-
-int	error_1(void)
-{
-	ft_putstr("Error: Argument count is not 2. \n");
-	return (0);
-}
-
-int	error_2(void)
-{
-	ft_putstr("Error: Argument input is not valid. \n");
-	return (0);
-}
-
-int	error_3(void)
-{
-	ft_putstr("Error: Unable to solve. Input may not be a valid one. \n");
-	return (0);
-}
-
-int	error(void)
-{
-	ft_putstr("Unknown Error. \n");
-	return (0);
-}
-
-void	ft_destroy_tab(int **tab, int size)
-{
-	while (size)
-	{
-		free(tab[size]);
-		size--;
-	}
-	free(tab);
-}
 
 int	main(int argc, char **argv)
 {
@@ -54,7 +32,7 @@ int	main(int argc, char **argv)
 			ft_print_table(tab, size);
 		else
 			return (error_3());
-		ft_destroy_tab(tab, size);
+		ft_destroy_table(tab, size);
 		return (0);
 	}
 	return (error());

@@ -15,18 +15,18 @@
 int	ft_check_line(int **tab, int size, int x, int y)
 {
 	int	tmp;
-	int	i;
+	int	count;
 
 	tmp = tab[y][x];
-    i = 0;
+    count = 0;
 	x = 1;
 	while (x <= size)
 	{
 		if (tmp == tab[y][x])
-			i++;
+			count++;
 		x++;
 	}
-	if (i <= 1)
+	if (count <= 1)
 		return (1);
 	return (0);
 }
@@ -34,19 +34,19 @@ int	ft_check_line(int **tab, int size, int x, int y)
 int	ft_check_column(int **tab, int size, int x, int y)
 {
 	int	tmp;
-	int	i;
+	int	count;
 
 	
 	tmp = tab[y][x];
-	i = 0;
+	count = 0;
 	y = 1;
 	while (y <= size)
 	{
 		if (tmp == tab[y][x])
-			i++;
+			count++;
 		y++;
 	}
-	if (i <= 1)
+	if (count <= 1)
 		return (1);
 	return (0);
 }
