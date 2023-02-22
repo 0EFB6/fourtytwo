@@ -15,7 +15,7 @@
 
 #include <unistd.h>
 
-typedef char t_bool;
+typedef char	t_bool;
 #define FALSE 0
 #define TRUE 1
 #define SUCCESS 0
