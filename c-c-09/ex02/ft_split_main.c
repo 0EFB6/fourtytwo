@@ -6,15 +6,16 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 22:03:36 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/23 12:37:03 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/23 12:36:39 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
 
-int	ft_is_separator(char c, char *charset)
+int ft_is_separator(char c, char *charset)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (charset[i] != '\0')
@@ -26,9 +27,9 @@ int	ft_is_separator(char c, char *charset)
 	return (0);
 }
 
-int	ft_separator_len(char *str, char *charset)
+int ft_separator_len(char *str, char *charset)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (str[i] && !ft_is_separator(str[i], charset))
@@ -36,10 +37,10 @@ int	ft_separator_len(char *str, char *charset)
 	return (i);
 }
 
-int	ft_count_str(char *str, char *charset)
+int ft_count_str(char *str, char *charset)
 {
-	int	i;
-	int	count;
+	int i;
+	int count;
 
 	i = 0;
 	count = 0;
@@ -55,11 +56,11 @@ int	ft_count_str(char *str, char *charset)
 	return (count);
 }
 
-char	*ft_word(char *str, char *charset)
+char *ft_word(char *str, char *charset)
 {
-	int	i;
-	int	separator_len;
-	char	*word;
+	int i;
+	int separator_len;
+	char *word;
 
 	i = 0;
 	separator_len = ft_separator_len(str, charset);
@@ -73,10 +74,10 @@ char	*ft_word(char *str, char *charset)
 	return (word);
 }
 
-char	**ft_split(char *str, char *charset)
+char **ft_split(char *str, char *charset)
 {
-	int	i;
-	char	**word;
+	int i;
+	char **word;
 
 	i = 0;
 	word = (char **)malloc((ft_count_str(str, charset) + 1) * sizeof(char *));
@@ -94,4 +95,20 @@ char	**ft_split(char *str, char *charset)
 	}
 	word[i] = 0;
 	return (word);
+}
+
+int main(int argc, char ** argv)
+{
+	int i;
+	char **split;
+	(void) argc;
+
+	i = 0;
+	split = ft_split(argv[1], argv[2]);
+	while (split[i])
+	{
+		printf("%s \n", split[i]);
+		i++;
+	}
+	return (0);
 }
