@@ -6,7 +6,7 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 22:03:36 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/23 12:37:03 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/23 18:11:20 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_is_separator(char c, char *charset)
 	return (0);
 }
 
-int	ft_separator_len(char *str, char *charset)
+int	ft_word_len(char *str, char *charset)
 {
 	int	i;
 
@@ -58,13 +58,13 @@ int	ft_count_str(char *str, char *charset)
 char	*ft_word(char *str, char *charset)
 {
 	int	i;
-	int	separator_len;
+	int	word_len;
 	char	*word;
 
 	i = 0;
-	separator_len = ft_separator_len(str, charset);
-	word = (char *)malloc((separator_len + 1) * sizeof(char));
-	while (i < separator_len)
+	word_len = ft_word_len(str, charset);
+	word = (char *)malloc((word_len + 1) * sizeof(char));
+	while (i < word_len)
 	{
 		word[i] = str[i];
 		i++;
