@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: booi <booi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 20:13:38 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/24 12:07:17 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/21 10:57:56 by booi              #+#    #+#             */
+/*   Updated: 2023/02/21 11:00:17 by booi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include <unistd.h>
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int	ft_strlen(char *str);
-int	ft_strcmp(char *s1, char *s2);
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
-#endif
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+}
