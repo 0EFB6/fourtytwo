@@ -12,10 +12,10 @@
 
 #include "ft_lib.h"
 
-int ft_check_number(char *num)
+int	ft_check_number(char *num)
 {
-	int i;
-	int size;
+	int	i;
+	int	size;
 
 	i = 0;
 	size = ft_strlen(num);

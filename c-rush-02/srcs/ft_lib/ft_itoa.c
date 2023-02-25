@@ -15,7 +15,7 @@
 
 char	*ft_itoa(int nb)
 {
-	long	n;
+	int		n;
 	int		i;
 	char	*str;
 

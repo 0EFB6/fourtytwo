@@ -12,13 +12,13 @@
 
 #include "ft_lib.h"
 
-int ft_error(void)
+int	ft_error(void)
 {
 	ft_putstr("Error\n");
 	return (0);
 }
 
-int ft_error_dict(void)
+int	ft_error_dict(void)
 {
 	ft_putstr("Dict Error\n");
 	return (0);

@@ -14,13 +14,14 @@
 #include "ft_lib.h"
 #include "rush.h"
 
-int ft_run(int argc, char **argv)
+int	ft_run(int argc, char **argv)
 {
-	char *buffer;
+	char	*buffer;
+	char	*file_name;
 
 	if (argc == 2)
 	{
-		char *file_name = "numbers.dict";
+		file_name = "numbers.dict";
 		if (ft_check_number(argv[1]) == 0)
 			return (0);
 		buffer = ft_open_read(file_name);

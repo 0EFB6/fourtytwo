@@ -13,10 +13,10 @@
 #include "rush.h"
 #include "ft_lib.h"
 
-void    ft_write_number(char *number, char *buffer)
+void	ft_write_number(char *number, char *buffer)
 {
-    int i;
-    char *str;
+    int		i;
+    char	*str;
 
     i = 0;
     str = ft_strstr(buffer, number);
@@ -36,13 +36,13 @@ void    ft_write_number(char *number, char *buffer)
     }
 }
 
-void    ft_write_number_digit_two(char *number, char *buffer)
+void	ft_write_number_digit_two(char *number, char *buffer)
 {
-    int number_len;
-    int digit_number_one;
-    int digit_number_two;
-    char *digit_number_one_char;
-    char *digit_number_two_char;
+    int		number_len;
+    int		digit_number_one;
+    int		digit_number_two;
+    char	*digit_number_one_char;
+    char	*digit_number_two_char;
 
     number_len = ft_strlen(number);
     if ((number_len == 2 && number[0] != '1' && number[1] != '0'))
@@ -59,11 +59,11 @@ void    ft_write_number_digit_two(char *number, char *buffer)
         ft_write_number(ft_strstr(buffer, number), buffer);  
 }
 
-void ft_write_zeros(int size, char *buffer)
+void	ft_write_zeros(int size, char *buffer)
 {
-	int number;
-	char *number_char;
-    char *and;
+	int		number;
+	char	*number_char;
+    char	*and;
 
 	if (size >= 3)
 	{
@@ -77,14 +77,14 @@ void ft_write_zeros(int size, char *buffer)
 	}
 }
 
-void    ft_convert(char *number, char *buffer)
+void	ft_convert(char *number, char *buffer)
 {
-    int i;
-    int number_len;
-    int digit_number_one;
-    int digit_number_two;
-    char *digit_number_one_char;
-    char *digit_number_two_char;
+    int		i;
+    int		number_len;
+    int		digit_number_one;
+    int		digit_number_two;
+    char	*digit_number_one_char;
+    char	*digit_number_two_char;
 
     i = 0;
     number_len = ft_strlen(number);
