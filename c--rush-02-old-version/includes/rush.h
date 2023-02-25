@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   rush.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 23:51:19 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/24 23:53:45 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/24 22:16:31 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/25 21:12:19 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_iterative_power(int nb, int power)
-{
-	int ans;
+#ifndef RUSH_H
+# define RUSH_H
 
-	ans = 1;
-	if (power < 0)
-		return (0);
-	while (power > 0)
-	{
-		ans = ans * nb;
-		power--;
-	}
-	return (ans);
-}
+char *ft_open_read_one_arg(void);
+char *ft_open_read_two_arg(char *file_name);
+void ft_run(int argc, char **argv);
+void ft_convert(char *number, char *buffer);
+
+#endif

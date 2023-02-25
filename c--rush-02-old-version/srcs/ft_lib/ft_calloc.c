@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush.h                                             :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 22:16:31 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/25 21:12:19 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/25 14:23:13 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/25 21:48:37 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RUSH_H
-# define RUSH_H
+#include <stdlib.h>
 
-char	*ft_open_read(char *file_name);
-int		ft_run(int argc, char **argv);
-void	ft_convert(char *number, char *buffer);
+void *ft_calloc(size_t nmemb, size_t size)
+{
+	size_t i;
+	size_t total_size;
+	void *ptr;
+	char *p;
 
-#endif
+
+	i = 0;
+	total_size = nmemb * size;
+	ptr = malloc(total_size);
+	p = ptr;
+	if (!ptr)
+		return (NULL);
+	while (i < total_size)
+	{
+		p[i] = 0;
+		i++;
+	}
+	return (ptr);
+}

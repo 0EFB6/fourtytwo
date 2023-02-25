@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_lib.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 23:54:07 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/24 23:54:13 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/24 22:16:31 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/25 22:31:33 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_itoa(int nb)
-{
-	char	*str;
-	long	n;
-	int		i;
+#ifndef FT_LIB_H
+# define FT_LIB_H
 
-	n = nb;
-	i = ft_len(n);
-	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
-		return (NULL);
-	str[i--] = '\0';
-	if (n == 0)
-	{
-		str[0] = 48;
-		return (str);
-	}
-	if (n < 0)
-	{
-		str[0] = '-';
-		n = n * -1;
-	}
-	while (n > 0)
-	{
-		str[i--] = 48 + (n % 10);
-		n = n / 10;
-	}
-	return (str);
-}
+int		ft_check_number(char *num);
+int		ft_error(void);
+int		ft_error_dict(void);
+int		ft_iterative_power(int nb, int power);
+char	*ft_itoa(int nb);
+int		ft_nbrlen(long nb);
+void	ft_putchar(char c);
+void	ft_putstr(char *str);
+int		ft_strlen(char *str);
+char	*ft_strstr(char *str, char *to_find);
+
+#endif

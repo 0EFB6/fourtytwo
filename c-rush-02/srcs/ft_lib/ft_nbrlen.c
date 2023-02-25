@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush.h                                             :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 22:16:31 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/25 21:12:19 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/25 14:56:21 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/25 15:00:53 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RUSH_H
-# define RUSH_H
+int ft_nbrlen(long nb)
+{
+	int i;
 
-char	*ft_open_read(char *file_name);
-int		ft_run(int argc, char **argv);
-void	ft_convert(char *number, char *buffer);
-
-#endif
+	i = 0;
+	if (nb < 0)
+	{
+		nb = -nb;
+		i++;
+	}
+	while (nb > 0)
+	{
+		nb /= 10;
+		i++;
+	}
+	return (i);
+}

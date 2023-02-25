@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_is_digit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 22:18:02 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/24 22:21:21 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/25 14:38:48 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/25 14:39:22 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush.h"
-
-int error(void)
+int ft_char_is_digit(char c)
 {
-	ft_putstr("Error\n");
-	return (0);
-}
-
-int error_dict(void)
-{
-	ft_putstr("Dict Error\n");
+	if (c >= '0' && c <= '9')
+		return (1);
 	return (0);
 }

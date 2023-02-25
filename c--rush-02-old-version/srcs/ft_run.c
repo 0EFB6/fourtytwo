@@ -1,50 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strndup.c                                       :+:      :+:    :+:   */
+/*   ft_run.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 22:06:41 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/24 22:07:27 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/25 21:04:56 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/25 22:18:26 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "ft_lib.h"
+#include "rush.h"
 
-int	ft_strlen(char *str)
+void ft_run(int argc, char **argv)
 {
-	int	i;
+	char *buffer;
 
-	i = 0;
-	while (*str != '\0')
+	if (argc == 2)
 	{
-		str++;
-		i++;
+		if (ft_check_number(argv[1]) == 0)
+			return ;
+		buffer = ft_open_read_one_arg();
+		ft_convert(argv[1], buffer);
+		ft_putchar('c');
+		free(buffer);
 	}
-	return (i);
-}
-
-char	*ft_strcpy(char *dest, char *src)
-{
-	char	*ptr;
-
-	ptr = dest;
-	while (*src != '\0')
+	else
 	{
-		*ptr = *src;
-		ptr++;
-		src++;
+		if (ft_check_number(argv[2]) == 0)
+			return ;
+		buffer = ft_open_read_two_arg(argv[1]);
+		ft_convert(argv[2], buffer);
+		free(buffer);
 	}
-	*ptr = '\0';
-	return (dest);
-}
-
-char	*ft_strdup(char *src)
-{
-	char	*dest;
-
-	dest = (char *)malloc(ft_strlen(src) + 1);
-	ft_strcpy(dest, src);
-	return (dest);
+	return ;
 }

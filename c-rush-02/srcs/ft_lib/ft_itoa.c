@@ -1,20 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush.h                                             :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 22:16:31 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/25 21:12:19 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/24 23:54:07 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/25 22:01:54 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RUSH_H
-# define RUSH_H
+#include <stdlib.h>
+#include "ft_lib.h"
 
-char	*ft_open_read(char *file_name);
-int		ft_run(int argc, char **argv);
-void	ft_convert(char *number, char *buffer);
+char	*ft_itoa(int nb)
+{
+	long	n;
+	int		i;
+	char	*str;
 
-#endif
+	n = nb;
+	i = ft_nbrlen(n);
+	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
+		return (NULL);
+	str[i--] = '\0';
+	if (n == 0)
+	{
+		str[0] = '0';
+		return (str);
+	}
+	if (n < 0)
+	{
+		str[0] = '-';
+		n = -n;
+	}
+	while (n > 0)
+	{
+		str[i--] = 48 + (n % 10);
+		n /= 10;
+	}
+	return (str);
+}

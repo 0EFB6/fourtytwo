@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush.h                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 22:16:31 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/25 21:12:19 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/25 15:03:16 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/25 15:03:21 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RUSH_H
-# define RUSH_H
+int	ft_atoi(char *str)
+{
+	int	is_negative;
+	int	num;
 
-char	*ft_open_read(char *file_name);
-int		ft_run(int argc, char **argv);
-void	ft_convert(char *number, char *buffer);
-
-#endif
+	is_negative = 1;
+	num = 0;
+	while (!(*str >= '0' && *str <= '9') && *str != '-' && *str != '+')
+	{
+		str++;
+	}
+	if (*str == '-')
+	{
+		is_negative = -1;
+		str++;
+	}
+	else if (*str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
+	{
+		num = num * 10 + (*str - 48);
+		str++;
+	}
+	return (is_negative * num);
+}

@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parselen.c                                      :+:      :+:    :+:   */
+/*   ft_write_number_power.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 22:38:48 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/24 22:39:59 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/25 20:02:14 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/25 22:20:03 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_lib.h"
 #include "rush.h"
 
-int ft_parselen(t_rush **parse)
+void ft_write_number_power(int size, char *buffer)
 {
-	int i;
+	int power_size;
+	char *power_size_char;
 
-	i = 0;
-	while (parse[i])
-		i++;
-	return (i);
+	if (size >= 3)
+	{
+		power_size = ft_iterative_power(1000, size / 3);
+		power_size_char = ft_itoa(power_size);
+		ft_putchar(' ');
+		ft_write_number(ft_strstr(buffer, power_size_char), buffer);
+	}
 }

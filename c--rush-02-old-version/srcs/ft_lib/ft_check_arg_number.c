@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush.h                                             :+:      :+:    :+:   */
+/*   ft_check_arg.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 22:16:31 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/25 21:12:19 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/24 22:21:58 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/25 19:21:50 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RUSH_H
-# define RUSH_H
+int ft_check_arg_number(char *argv)
+{
+	int i;
+	int len;
 
-char	*ft_open_read(char *file_name);
-int		ft_run(int argc, char **argv);
-void	ft_convert(char *number, char *buffer);
-
-#endif
+	i = 0;
+	len = 0;
+	while (argv[len])
+		len++;
+	while (argv[i] && (argv[i] >= '0' && argv[i] <= '9'))
+		i++;
+	if (len == i && len != 0)
+		return (0);
+	return (1);
+}

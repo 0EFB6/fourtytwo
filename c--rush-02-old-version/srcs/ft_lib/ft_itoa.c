@@ -1,18 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 21:57:43 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/24 21:58:06 by cwei-she         ###   ########.fr       */
+/*   Created: 2023/02/24 23:54:07 by cwei-she          #+#    #+#             */
+/*   Updated: 2023/02/25 22:01:54 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
+#include "ft_lib.h"
 
-voif ft_putchar(char c)
+char	*ft_itoa(int nb)
 {
-	write(1, &c, 1);
+	long	n;
+	int		i;
+	char	*str;
+
+	n = nb;
+	i = ft_nbrlen(n);
+	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
+		return (NULL);
+	str[i--] = '\0';
+	if (n == 0)
+	{
+		str[0] = 48;
+		return (str);
+	}
+	if (n < 0)
+	{
+		str[0] = '-';
+		n = -n;
+	}
+	while (n > 0)
+	{
+		str[i--] = 48 + (n % 10);
+		n /= 10;
+	}
+	return (str);
 }
