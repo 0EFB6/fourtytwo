@@ -77,17 +77,44 @@ void	ft_write_zeros(int size, char *buffer)
 	}
 }
 
+int	ft_convert_overflow(int i, char *number, char *buffer, int number_len)
+{
+	if (number_len % 3 == 1)
+	{
+		ft_convert_modulo_one(i, number, buffer);
+		number_len--;
+		ft_write_zeros(number_len, buffer);
+		return (number_len);
+	}
+	else if (number_len % 3 == 2)
+	{
+		ft_convert_modulo_two(i, number, buffer);
+		number_len -= 2;
+		ft_write_zeros(number_len, buffer);
+		return (number_len);
+	}
+	else if (number_len % 3 == 0)
+	{
+		ft_convert_modulo_zero(i, number, buffer);
+		number_len -= 3;
+		if ((number_len >= 3) && (number[i] != '0'
+				|| number[i + 1] != '0' || number[i + 2] != '0'))
+			ft_write_zeros(number_len, buffer);
+		i += 3;
+		return (number_len);
+	}
+	return (number_len);
+}
+
 void	ft_convert(char *number, char *buffer)
 {
 	int		i;
 	int		number_len;
-	int		digit_number_one;
-	int		digit_number_two;
-	char	*digit_number_one_char;
-	char	*digit_number_two_char;
+	int		orig_number_len;
 
 	i = 0;
 	number_len = ft_strlen(number);
+	orig_number_len = ft_strlen(number);
 	while (number_len > 0)
 	{
 		if (number_len > 1 && number[0] == '0')
@@ -95,46 +122,7 @@ void	ft_convert(char *number, char *buffer)
 			ft_error_dict();
 			break ;
 		}
-		if (number_len % 3 == 1)
-		{
-			digit_number_one = number[i] - 48;
-			digit_number_one_char = ft_itoa(digit_number_one);
-			ft_write_number(ft_strstr(buffer, digit_number_one_char), buffer);
-			i++;
-			number_len--;
-			ft_write_zeros(number_len, buffer);
-		}
-		else if (number_len % 3 == 2)
-		{
-			digit_number_two = 10 * (number[i] - 48) + (number[i + 1] - 48);
-			digit_number_two_char = ft_itoa(digit_number_two);
-			ft_write_number_digit_two(digit_number_two_char, buffer);
-			i += 2;
-			number_len -= 2;
-			ft_write_zeros(number_len, buffer);
-		}
-		else if (number_len % 3 == 0)
-		{
-			digit_number_one = number[i] - 48;
-			digit_number_two = 10 * (number[i + 1] - 48) + (number[i + 2] - 48);
-			digit_number_one_char = ft_itoa(digit_number_one);
-			digit_number_two_char = ft_itoa(digit_number_two);
-			if (number[i] != '0')
-			{
-				ft_putchar(' ');
-				ft_write_number(ft_strstr(buffer, digit_number_one_char), buffer);
-				ft_putchar(' ');
-				ft_write_number(ft_strstr(buffer, "100"), buffer);
-			}
-			if (number[i + 1] != '0' || number[i + 2] != '0')
-			{
-				ft_putchar(' ');
-				ft_write_number_digit_two(digit_number_two_char, buffer);
-			}
-			number_len -= 3;
-			if ((number_len >= 3) && (number[i] != '0' || number[i + 1] != '0' || number[i + 2] != '0'))
-				ft_write_zeros(number_len, buffer);
-			i += 3;
-		}	
+		number_len = ft_convert_overflow(i, number, buffer, number_len);
+		i = orig_number_len - number_len;
 	}
 }

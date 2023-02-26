@@ -6,7 +6,7 @@
 #    By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/24 21:43:51 by cwei-she          #+#    #+#              #
-#    Updated: 2023/02/26 00:56:26 by cwei-she         ###   ########.fr        #
+#    Updated: 2023/02/26 15:00:37 by cwei-she         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ HEADER = includes/
 SRCS = srcs/main.c \
 	   srcs/ft_convert.c \
 	   srcs/ft_open.c \
-	   srcs/ft_run.c 
+	   srcs/ft_run.c \
+	   srcs/ft_convert_digit_three.c
 
 OBJS = srcs/ft_lib/ft_check_number.o \
 	   srcs/ft_lib/ft_error.o \
