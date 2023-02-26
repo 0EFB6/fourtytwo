@@ -19,7 +19,7 @@ int	ft_check_number(char *num)
 
 	i = 0;
 	size = ft_strlen(num);
-	if (size > 39)
+	if (size > 14)
 	{
 		ft_error();
 		return (0);

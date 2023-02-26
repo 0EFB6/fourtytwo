@@ -18,7 +18,7 @@ int		ft_error(void);
 int		ft_error_dict(void);
 int		ft_iterative_power(int nb, int power);
 char	*ft_itoa(int nb);
-int		ft_nbrlen(long nb);
+int		ft_nbrlen(int nb);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
 int		ft_strlen(char *str);

@@ -13,7 +13,7 @@
 #ifndef RUSH_H
 # define RUSH_H
 
-char	*ft_open_read(char *file_name);
+char	*ft_open(char *file_name);
 int		ft_run(int argc, char **argv);
 void	ft_convert(char *number, char *buffer);
 

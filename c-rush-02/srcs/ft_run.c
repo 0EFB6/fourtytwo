@@ -24,7 +24,7 @@ int	ft_run(int argc, char **argv)
 		file_name = "numbers.dict";
 		if (ft_check_number(argv[1]) == 0)
 			return (0);
-		buffer = ft_open_read(file_name);
+		buffer = ft_open(file_name);
 		ft_convert(argv[1], buffer);
 		free(buffer);
 	}
@@ -32,7 +32,7 @@ int	ft_run(int argc, char **argv)
 	{
 		if (ft_check_number(argv[2]) == 0)
 			return (0);
-		buffer = ft_open_read(argv[1]);
+		buffer = ft_open(argv[1]);
 		ft_convert(argv[2], buffer);
 		free(buffer);
 	}
