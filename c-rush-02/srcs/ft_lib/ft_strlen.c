@@ -6,13 +6,13 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:50:18 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/24 21:51:05 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:25:51 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
