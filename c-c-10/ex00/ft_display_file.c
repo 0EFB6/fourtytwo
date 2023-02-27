@@ -6,20 +6,20 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 16:20:03 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/23 17:01:39 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/27 11:45:21 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <fcntl.h>
 
-int	ft_display(char *file)
+int	ft_display_file(char *file)
 {
 	int	r;
 	int	f;
 	char	c;
 
-	f = open(file, 'r');
+	f = open(file, O_RDONLY);
 	if (f == -1)
 		return (0);
 	while((r = read(f, &c, 1)))
@@ -31,6 +31,7 @@ int	ft_display(char *file)
 	close(f);
 	return (1);
 }
+
 int main(int argc, char **argv)
 {
 	if (argc == 1)
@@ -39,8 +40,8 @@ int main(int argc, char **argv)
 		write(2, "Too many arguments.\n", 20);
 	else
 	{
-		if (!ft_display(argv[1]))
-			write(2, "Cannot read file.\n", 16);
+		if (!ft_display_file(argv[1]))
+			write(2, "Cannot read file.\n", 18);
 	}
 	return (0);
 }
