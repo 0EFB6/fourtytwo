@@ -6,12 +6,12 @@
 #    By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/23 17:07:02 by cwei-she          #+#    #+#              #
-#    Updated: 2023/02/27 13:33:44 by cwei-she         ###   ########.fr        #
+#    Updated: 2023/02/27 13:33:30 by cwei-she         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft_cat
-SRCS = ft_cat.c
+NAME = ft_tail
+SRCS = ft_tail.c
 OBJS = ${SRCS:.c=.o}
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
