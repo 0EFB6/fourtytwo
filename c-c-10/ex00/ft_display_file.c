@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   display_file.c                                     :+:      :+:    :+:   */
+/*   ft_display_file.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 16:20:03 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/27 11:45:21 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/02/28 18:27:24 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_display_file(char *file)
 	f = open(file, O_RDONLY);
 	if (f == -1)
 		return (0);
-	while((r = read(f, &c, 1)))
+	while((r = read(f, &c, 1)) != 0)
 	{
 		if (r == -1)
 			return (0);
@@ -32,7 +32,7 @@ int	ft_display_file(char *file)
 	return (1);
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	if (argc == 1)
 		write(2, "File name missing.\n", 19);
