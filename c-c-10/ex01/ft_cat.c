@@ -6,7 +6,7 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:47:35 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/27 13:30:49 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/03/01 12:41:13 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_puterr(char *basen, char *filename, char *err)
 	ft_putstr(basen);
 	ft_putstr(": ");
 	ft_putstr(filename);
-	ft_putstr(": ");
+	ft_putstr("\nError: ");
 	ft_putstr(err);
 	ft_putchar('\n');
 	return ;
@@ -48,7 +48,7 @@ void	ft_display_file(char *basen, char *filename)
 	int		f;
 
 	buf = 0;
-	f = open(filename, O_RDONLY);
+	f = open(filename, 0);
 	if (f < 0)
 	{
 		ft_puterr(basen, filename, strerror(errno));
@@ -66,6 +66,7 @@ int	main(int argc, char **argv)
 	int		i;
 	char	buffer;
 
+	i = 1;
 	if (argc == 1)
 	{
 		buffer = 0;
@@ -73,7 +74,6 @@ int	main(int argc, char **argv)
 			ft_putchar(buffer);
 		return (0);
 	}
-	i = 1;
 	while (i < argc)
 		ft_display_file(basename(argv[0]), argv[i++]);
 	return (0);

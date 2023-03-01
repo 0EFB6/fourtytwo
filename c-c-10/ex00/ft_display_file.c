@@ -6,7 +6,7 @@
 /*   By: cwei-she <cwei-she@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 16:20:03 by cwei-she          #+#    #+#             */
-/*   Updated: 2023/02/28 18:27:24 by cwei-she         ###   ########.fr       */
+/*   Updated: 2023/03/01 12:42:59 by cwei-she         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,14 @@
 
 int	ft_display_file(char *file)
 {
-	int	r;
 	int	f;
 	char	c;
 
 	f = open(file, O_RDONLY);
 	if (f == -1)
 		return (0);
-	while((r = read(f, &c, 1)) != 0)
+	while(read(f, &c, 1) > 0)
 	{
-		if (r == -1)
-			return (0);
 		write(1, &c, 1);
 	}
 	close(f);
