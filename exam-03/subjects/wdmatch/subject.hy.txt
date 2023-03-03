@@ -1,0 +1,25 @@
+Առաջադրանքի անունը՝ wdmatch
+Ակնկալվող ֆայլեր՝ wdmatch.c
+Թույլատրված ֆունկցիաներ՝ write
+--------------------------------------------------------------------------------
+Գրել ծրագիր, որը վերցնում է երկու տողերը և ստուգում է, թե արդյոք
+հնարավոր է գրել առաջին տողը երկրորդ տողի նիշերով՝ հետևելով երկրորդ տողում այդ 
+նիշերի հերթականությանը։
+
+Եթե դա հնարավոր է, ծրագիրը արտածում է տողը՝ հաջորդված \n-ով, այլապես՝ այն ուղղակի
+արտածում է \n-ը։
+
+Եթե արգումենտների թիվը 2 չէ, ծրագիրը արտածում է \n։
+
+Օրինակներ՝
+
+$>./wdmatch "faya" "fgvvfdxcacpolhyghbreda" | cat -e
+faya$
+$>./wdmatch "faya" "fgvvfdxcacpolhyghbred" | cat -e
+$
+$>./wdmatch "forty two" "qfqfsoudf arzgrsayns tsryegftdgs sjytwdekuooixq " | cat -e
+forty two$
+$>./wdmatch "error" rrerrrfiiljdfxjyuifrrvcoojh | cat -e
+$
+$>./wdmatch | cat -e
+$

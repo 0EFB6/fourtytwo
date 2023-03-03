@@ -1,0 +1,38 @@
+Nome esercizio		: fizzbuzz
+File da consegnare	: fizzbuzz.c
+Funzioni da consegnare	: write
+--------------------------------------------------------------------------------
+
+Scrivi un programma che visualizzi i numeri da 1 a 100, ognuno separato 
+da una nuova riga.
+
+Se il numero è un multiplo di 3, visualizzerà 'fizz'.
+
+Se il numero è un multiplo di 5, visualizzerà 'buzz'.
+
+Se il numero è multiplo sia di 3 che di 5, visualizzerà 'fizzbuzz'.
+
+Esempi:
+
+$>./fizzbuzz
+1
+2
+fizz
+4
+buzz
+fizz
+7
+8
+fizz
+buzz
+11
+fizz
+13
+14
+fizzbuzz
+[...]
+97
+98
+fizz
+buzz
+$> 

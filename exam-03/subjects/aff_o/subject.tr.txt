@@ -1,0 +1,21 @@
+Assignment name  : aff_o
+Expected files   : aff_o.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+
+Bir string(metin)'i alıp karşılaştığı ilk 'o' karakterini gösterip yeni satıra
+geçen, eğer 'o' karakteri verilen string(metin)'de yoksa 'o' karakterini
+gösterip yeni satıra geçen ve parametre sayısı 1 değilse 'o' karakterini
+gösterip yeni satıra geçen bir program yazın.
+
+Örnek:
+
+$> ./aff_o "abc" | cat -e
+o$
+$> ./aff_o 'H@yaT çok ac!M@S!Z' | cat -e
+o$
+$> ./aff_o 'eKMek buL@M@Zl@RS@ p@st@ yeS1NL£r' | cat -e
+o$
+$> ./aff_o | cat -e
+o$

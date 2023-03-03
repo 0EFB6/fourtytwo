@@ -1,0 +1,13 @@
+Dénomination attendu    : ft_atoi
+Fichier à rendre        : ft_atoi.c
+Fonction(s) autorisée(s):
+--------------------------------------------------------------------------------
+
+Écrivez une fonction qui convertit une chaîne de caractère en un entier (type int)
+et le retourne.
+
+Votre fonction s'apparentera à la fonction standard atoi (man atoi).
+
+Elle devra être prototypée de la façon suivante:
+
+int	ft_atoi(const char *str);

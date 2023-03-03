@@ -1,0 +1,26 @@
+Nome esercizio		: wdmatch
+File da consegnare	: wdmatch.c
+Funzioni consentite	: write
+--------------------------------------------------------------------------------
+
+Scrivi un programma che prenda due stringhe e controlli se sia possibile scrivere
+la prima stringa utilizzando i caratteri della seconda stringa, rispettando l'ordine
+in cui questi caratteri compaiono nella seconda.
+
+Se è possibile, il programma visualizza la stringa seguita da un \n, altrimenti solo
+un \n.
+
+Se il numero di argomenti non è 2, il programma visualizza un \n.
+
+Esempi:
+
+$>./wdmatch "faya" "fgvvfdxcacpolhyghbreda" | cat -e
+faya$
+$>./wdmatch "faya" "fgvvfdxcacpolhyghbred" | cat -e
+$
+$>./wdmatch "forty two" "qfqfsoudf arzgrsayns tsryegftdgs sjytwdekuooixq " | cat -e
+forty two$
+$>./wdmatch "error" rrerrrfiiljdfxjyuifrrvcoojh | cat -e
+$
+$>./wdmatch | cat -e
+$

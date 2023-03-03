@@ -1,0 +1,39 @@
+Assignment name  : fizzbuzz
+Expected files   : fizzbuzz.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva um programa que escreva uma sequência de números de 1 a 100 na saída 
+padrão, todos separados por uma newline. 
+
+Se o número for um múltiplo de 3, o programa deverá escrever 'fizz' no lugar.
+
+Se o número for um múltiplo de 5, o programa deverá escrever 'buzz' no lugar.
+
+Se o número for um múltiplo de 3 e um múltiplo de 5, o programa deverá escrever 
+'fizzbuzz' no lugar.
+
+Exemplo:
+
+$>./fizzbuzz
+1
+2
+fizz
+4
+buzz
+fizz
+7
+8
+fizz
+buzz
+11
+fizz
+13
+14
+fizzbuzz
+[...]
+97
+98
+fizz
+buzz
+$> 

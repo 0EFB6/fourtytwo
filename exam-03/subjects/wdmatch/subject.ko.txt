@@ -1,0 +1,25 @@
+Assignment name  : wdmatch
+Expected files   : wdmatch.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+두 문자열을 받아 두 번째 문자열에 나타나는 문자의 순서를 고려하여 두 번째 문자열의
+문자로 첫 번째 문자열을 작성할 수 있는지 확인하십시오.
+
+가능한 경우 프로그램은 문자열 후 줄바꿈 문자를 출력하고, 아닐 경우 줄바꿈 문자만
+출력하십시오.
+
+인수의 수가 2가 아닌 경우, 줄바꿈을 출력하십시오.
+
+Examples:
+
+$>./wdmatch "faya" "fgvvfdxcacpolhyghbreda" | cat -e
+faya$
+$>./wdmatch "faya" "fgvvfdxcacpolhyghbred" | cat -e
+$
+$>./wdmatch "forty two" "qfqfsoudf arzgrsayns tsryegftdgs sjytwdekuooixq " | cat -e
+forty two$
+$>./wdmatch "error" rrerrrfiiljdfxjyuifrrvcoojh | cat -e
+$
+$>./wdmatch | cat -e
+$

@@ -1,0 +1,12 @@
+Assignment name  : ft_putnbr
+Expected files   : ft_putnbr.c
+Version          : 1
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Parametre olarak aldığı değeri yazan bir fonksiyon yazın. Bu fonksiyon, bir
+'integer'ın alabiliceği bütün sayıları yazabilmesi gerek.
+
+Fonksiyonunuz aşağıdaki gibi tanımlanmalıdır:
+
+void    ft_putnbr(int nb);

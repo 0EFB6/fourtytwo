@@ -1,0 +1,25 @@
+課題名            : wdmatch
+提出ファイル       : wdmatch.c
+使用可能な関数      : write
+--------------------------------------------------------------------------------
+
+2つの文字列をコマンドライン引数から受け取り、1つ目の文字列を、2つ目の文字列にある文字で作成できるか確認するプログラムを書きなさい。
+ただし、それぞれの文字列の順序を守ること。
+
+もし可能である場合、1つ目の文字列を'\n'とともに標準出力に出力し、もし不可能である場合は、'\n'だけを
+標準出力に出力すること。
+
+もしコマンドライン引数の数が2つではない場合、'\n'だけを標準出力に出力すること。
+
+例）
+
+$>./wdmatch "faya" "fgvvfdxcacpolhyghbreda" | cat -e
+faya$
+$>./wdmatch "faya" "fgvvfdxcacpolhyghbred" | cat -e
+$
+$>./wdmatch "forty two" "qfqfsoudf arzgrsayns tsryegftdgs sjytwdekuooixq " | cat -e
+forty two$
+$>./wdmatch "error" rrerrrfiiljdfxjyuifrrvcoojh | cat -e
+$
+$>./wdmatch | cat -e
+$

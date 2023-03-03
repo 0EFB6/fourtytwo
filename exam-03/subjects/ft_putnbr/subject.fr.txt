@@ -1,0 +1,13 @@
+Dénomination attendu    : ft_putnbr
+Fichier à rendre        : ft_putnbr.c
+Version                 : 1
+Fonction(s) autorisée(s): write
+--------------------------------------------------------------------------------
+
+Écrivez une fonction qui affiche sur la sortie standard, le nombre saisi en
+paramètre. La fonction doit pouvoir afficher toutes les valeurs possibles dans
+une variable de type int.
+
+Votre fonction doit être déclarée comme suit:
+
+void    ft_putnbr(int nb);

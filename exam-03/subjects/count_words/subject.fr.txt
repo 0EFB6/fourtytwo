@@ -1,0 +1,15 @@
+Dénomination attendu    : count_words
+Fichier à rendre        : count_words.c
+Version                 : 1
+Fonction(s) autorisée(s):
+--------------------------------------------------------------------------------
+
+Écrivez une fonction qui prend une chaîne de caractères en paramètre, la divise
+en mots et renvoie un entier pour le nombre de mots.
+
+Un "mot" est défini comme faisant partie d'une chaîne délimitée par des espaces,
+ou par le début et la fin de la chaine de caractères.
+
+Votre fonction doit être déclarée comme suit :
+
+int     count_words(char *str);

@@ -1,0 +1,24 @@
+Dénomination attendu    : aff_o
+Fichier à rendre        : aff_o.c
+Version                 : 1
+Fonction(s) autorisée(s): write
+--------------------------------------------------------------------------------
+
+Écrivez un programme qui prend en paramètre une chaîne de caractères et affiche le
+premier caractère 'o' qu'il rencontre dans celle-ci, suivi d'une nouvelle ligne.
+S'il n'y a pas de caractères 'o' dans la chaîne, le programme affiche "o" suivi
+d'une nouvelle ligne. Si le nombre de paramètres est différent de 1,
+le programme affiche 'o' suivi d'une nouvelle ligne.
+
+Example:
+
+$> ./aff_o "abc" | cat -e
+o$
+$> ./aff_o 'RaInB0w d4Sh!' | cat -e
+o$
+$> ./aff_o 'ThE C4k3 Is a L|3' | cat -e
+o$
+$> ./aff_o 'C0cOnUt 0N th3 b3AcH' | cat -e
+o$
+$> ./aff_o | cat -e
+o$

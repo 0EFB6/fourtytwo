@@ -1,0 +1,19 @@
+Assignment name  : occ_z
+Expected files   : occ_z.c
+Allowed functions:
+Version          : 1
+--------------------------------------------------------------------------------
+
+Verilen 'string'te 'Z' karakterinin var olma sayısını döndüren bir fonksiyon
+yazın.
+
+Örnek:
+XxxxYyy
+0
+
+XxZZyZ
+3
+
+Fonksiyonunuz aşağıdaki gibi tanımlanmalıdır:
+
+int     occ_z(char *str);

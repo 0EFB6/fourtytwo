@@ -1,0 +1,80 @@
+examshell> grademe
+
+Before continuing, please make ABSOLUTELY SURE that you have pushed your files,
+that they are in the right directory, that you didn't forget anything, etc...
+If your assignment is wrong, you will have the same assignment
+
+!
+Are you sure? [y/N] y
+OK, making grading request to server now.
+
+We will now wait for the job to complete.
+Please be patient, this CAN take several minutes...
+(10 seconds is fast, 30 seconds is expected, 3 minutes is a maximum)
+waiting...
+>>>>>>>>>> FAILURE <<<<<<<<<<
+You have failed the assignment.
+WARNING: No trace available for this exam project, you will need to find potential errors by yourself!
+
+(Press Enter to continue...)
+
+================================================================================
+You are currently at level 11
+You are running in REAL mode (Your grade will be counted)
+Your current grade is 66/100
+Assignments:
+  Level 0:
+    0: aff_o for 6 potential points (Success)
+  Level 1:
+    0: ft_putstr for 6 potential points (Success)
+  Level 2:
+    0: ft_strcmp for 6 potential points (Failure)
+    1: ft_strcmp for 6 potential points (Failure)
+    2: ft_strcmp for 6 potential points (Failure)
+    3: ft_strcmp for 6 potential points (Failure)
+    4: ft_strcmp for 6 potential points (Success)
+  Level 3:
+    0: occ_z for 6 potential points (Failure)
+    1: occ_z for 6 potential points (Success)
+  Level 4:
+    0: ft_atoi for 6 potential points (Failure)
+    1: ft_atoi for 6 potential points (Success)
+  Level 5:
+    0: fizzbuzz for 6 potential points (Success)
+  Level 6:
+    0: ft_putnbr for 6 potential points (Success)
+  Level 7:
+    0: aff_first_param for 6 potential points (Success)
+  Level 8:
+    0: wdmatch for 6 potential points (Success)
+  Level 9:
+    0: count_words for 6 potential points (Failure)
+    1: count_words for 6 potential points (Failure)
+    2: count_words for 6 potential points (Failure)
+    3: count_words for 6 potential points (Failure)
+    4: count_words for 6 potential points (Failure)
+    5: count_words for 6 potential points (Success)
+  Level 10:
+    0: ft_rrange for 6 potential points (Success)
+  Level 11:
+    0: ft_split for 6 potential points (Failure)
+    1: ft_split for 6 potential points (Failure)
+    2: ft_split for 6 potential points (Current)
+
+Your current assignment is ft_split for 6 potential points
+It is assignment 2 for level 11
+The subject is located at: ~/subjects/ft_split
+You must turn in your files in a subdirectory of your Git repository with the
+same name as the assignment (~/rendu/ft_split).
+Of course, you must still push...
+
+The end date for this exam is: 03/03/2023 22:30:00
+You have 2hrs, 29min and 40sec remaining
+================================================================================
+You can now work on your assignment. When you are sure you're done with it,
+push it to vogsphere, and then use the "grademe" command to be graded.
+examshell> finish
+Please confirm that you REALLY want to end your current session.
+If you do, you will not be able to do anything with it anymore!
+Are you finished? [y/N] y
+Your session has been marked as finished. You may now log out.

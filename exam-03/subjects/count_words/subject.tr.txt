@@ -1,0 +1,17 @@
+Assignment name  : count_words
+Expected files   : count_words.c
+Allowed functions: 
+Version          : 1
+--------------------------------------------------------------------------------
+
+Bir string(metin) alan ve bu stringin kelime sayısını döndüren bir fonksiyon
+yazın.
+
+Bir "kelime", bir string(metin)'de boşluk veya string(metin) başı/sonu ile
+ayrılmış parçalar olarak tanımlanır.
+
+Fonksiyonunuz aşağıdaki gibi tanımlanmalıdır:
+
+int     count_words(char *str);
+
+
